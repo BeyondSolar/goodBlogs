@@ -12,10 +12,10 @@ dotenv.config();
 Connection();
 const app = express();
 
+app.use(cors());
 app.use(express.json()); // Replaces bodyParser.json()
 
 
-app.use(cors());
 
 app.use(express.urlencoded({ extended: true })); // Replaces bodyParser.urlencoded()
 
