@@ -19,13 +19,13 @@ app.use(express.json()); // Replaces bodyParser.json()
 
 app.use(express.urlencoded({ extended: true })); // Replaces bodyParser.urlencoded()
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'build')));
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, 'build')));
 
-// Serve index.html for any other route
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// // Serve index.html for any other route
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 // Routes
 app.use('/', Router);
